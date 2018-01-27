@@ -5,6 +5,9 @@
   "repository": "<fill-your-repository-here>",
   "nativescript": {
     "id": "org.nativescript.NativeMobileTimeTracking",
+    "tns-ios": {
+      "version": "3.4.1"
+    },
     "tns-android": {
       "version": "3.4.1"
     }

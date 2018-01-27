@@ -1,0 +1,22 @@
+<ActionBar class="action-bar" backgroundColor="#009688">
+    <Label class="action-bar-title" text="Sign In"></Label>
+</ActionBar>
+
+
+<FlexboxLayout class="page page-content" flexDirection="column" justifyContent="center" alignItems="center" width="95%" height="100%">
+
+    <StackLayout orientation="horizontal" width="80%">
+        <TextField name="login-mail" [(ngModel)]="loginModel.mail" hint="Enter your mail" keyboardType="email" returnKeyType="next" width="100%"></TextField>
+    </StackLayout>
+
+    <StackLayout orientation="horizontal" width="80%">
+        <TextField name="login-pw" [(ngModel)]="loginModel.pw" hint="Enter your password" returnKeyType="done" (returnPress)="onSignInTap()"
+            width="100%"></TextField>
+    </StackLayout>
+
+    <StackLayout orientation="horizontal" width="80%" marginTop="5%">
+        <Button text="Sign Up" (tap)="onSignUpTap()" backgroundColor="#b71c1c" color="white"></Button>
+        <Button text="Sign In" (tap)="onSignInTap()" backgroundColor="#009688" color="white"></Button>
+    </StackLayout>
+
+</FlexboxLayout>
