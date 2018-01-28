@@ -6,15 +6,15 @@ import { Component, OnInit } from "@angular/core";
     templateUrl: "./home.component.html"
 })
 export class HomeComponent implements OnInit {
-    constructor() {
-        /* ***********************************************************
-        * Use the constructor to inject services.
-        *************************************************************/
-    }
 
-    ngOnInit(): void {
-        /* ***********************************************************
-        * Use the "ngOnInit" handler to initialize data for the view.
-        *************************************************************/
+    currentProgress: number = 0;
+
+    constructor() {}
+
+    ngOnInit(): void {}
+
+
+    onNextTap(){
+        this.currentProgress += 1;
     }
 }

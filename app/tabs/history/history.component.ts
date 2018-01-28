@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-    selector: 'History',
+    selector: "History",
     moduleId: module.id,
-    templateUrl: 'history.component.html'
+    templateUrl: "history.component.html"
 })
 
 export class HistoryComponent implements OnInit {

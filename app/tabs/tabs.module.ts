@@ -4,10 +4,10 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 import { TabsRoutingModule } from "./tabs-routing.module";
 
 // DECLARATIONS
-import { HomeComponent } from "./home/home.component";
-import { TabsComponent } from "./tabs.component";
 import { HistoryComponent } from "./history/history.component";
+import { HomeComponent } from "./home/home.component";
 import { SettingsComponent } from "./settings/settings.component";
+import { TabsComponent } from "./tabs.component";
 
 @NgModule({
     imports: [

@@ -1,4 +1,4 @@
-<ActionBar class="action-bar" backgroundColor="#009688">
+<ActionBar class="action-bar" >
     <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="onBackTap()"></NavigationButton>
     <Label class="action-bar-title" text="Sign Up"></Label>
 </ActionBar>
@@ -10,15 +10,16 @@
     </StackLayout>
 
     <StackLayout orientation="horizontal" width="80%">
-        <TextField name="signup-pw" [(ngModel)]="registrationModel.pw" hint="Enter your password" width="100%"></TextField>
+        <TextField name="signup-pw" [(ngModel)]="registrationModel.pw" hint="Enter your password" secure="true" width="100%"></TextField>
     </StackLayout>
 
     <StackLayout orientation="horizontal" width="80%">
-        <TextField name="signup-pw-confirm" [(ngModel)]="registrationModel.pwConfirm" hint="Confirm your password" width="100%"></TextField>
+        <TextField name="signup-pw-confirm" [(ngModel)]="registrationModel.pwConfirm" hint="Confirm your password" secure="true" (returnPress)="onSignUpTap()"
+            width="100%"></TextField>
     </StackLayout>
 
     <StackLayout orientation="horizontal" width="80%" marginTop="5%">
-        <Button text="Sign In" (tap)="onSignUpTap()" backgroundColor="#009688" color="white"></Button>
+        <Button text="Sign Up" (tap)="onSignUpTap()" backgroundColor="#3A53FF" color="white"></Button>
     </StackLayout>
 
 </FlexboxLayout>

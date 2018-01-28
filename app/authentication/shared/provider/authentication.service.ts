@@ -1,26 +1,43 @@
-import { Injectable } from '@angular/core';
-import { RegistrationModel } from '../models/registration.model';
-import { LoginModel } from '../models/login.model';
+import { Injectable } from "@angular/core";
+import { LoginModel } from "../models/login.model";
+import { RegistrationModel } from "../models/registration.model";
+import { HttpClient } from "@angular/common/http";
+import "rxjs/add/operator/map"
+
+
 
 @Injectable()
 export class AuthenticationService {
+    private endpoint: string = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyAOFJrOoZGs6mtx1oQoKHET-zzb-PabLUw"
+    private user: any = null;
 
-    constructor() { }
+    constructor(
+        private http: HttpClient) { }
 
-    public register(newUser: RegistrationModel) {
-        console.log("TODO: Register")
+    register(newUser: RegistrationModel) {
+        console.log("TODO: Register");
     }
 
-    public login(user: LoginModel) {
-        console.log("TODO: Login")
+    login(user: LoginModel) {
+        return this.http.post(this.endpoint, {
+            email: user.mail,
+            password: user.pw,
+            returnSecureToken: true
+        }).map(this.handleLogin)
     }
 
-    public logout(user: LoginModel) {
-        console.log("TODO: Logout")
+    logout(user: LoginModel) {
+        console.log("TODO: Logout");
     }
 
-    public isLoggedIn(user: LoginModel) {
-        console.log("TODO: IsLoggedIn")
+    isLoggedIn(user: LoginModel) {
+        console.log("TODO: IsLoggedIn");
+    }
+
+
+    handleLogin(response: Response) {
+        this.user = Object.assign({}, response)
+        return this.user;
     }
 
 }

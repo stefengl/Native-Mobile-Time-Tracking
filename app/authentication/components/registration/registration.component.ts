@@ -1,42 +1,40 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { RegistrationModel } from '../../shared/models/registration.model';
-import { AuthenticationService } from '../../shared/provider/authentication.service';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { RegistrationModel } from "../../shared/models/registration.model";
+import { AuthenticationService } from "../../shared/provider/authentication.service";
 
 @Component({
-    selector: 'Registration',
+    selector: "Registration",
     moduleId: module.id,
-    templateUrl: 'registration.component.html'
+    templateUrl: "registration.component.html"
 })
 
 export class RegistrationComponent implements OnInit {
 
     registrationModel: RegistrationModel = {
-        mail: '',
-        pw: '',
-        pwConfirm: ''
-    }
+        mail: "",
+        pw: "",
+        pwConfirm: ""
+    };
 
     constructor(
         private router: Router,
-        private auth : AuthenticationService    
+        private auth: AuthenticationService
     ) { }
 
     ngOnInit() { }
 
     onSignUpTap() {
-        let isValid = this.isFormValid()
+        const isValid = this.isFormValid();
 
         if (isValid) {
             this.auth.register(this.registrationModel);
         }
 
-        
-
     }
 
     onBackTap() {
-        this.router.navigate(["/login"])
+        this.router.navigate(["/login"]);
     }
 
     isFormValid(): boolean {

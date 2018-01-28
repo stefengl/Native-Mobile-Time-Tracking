@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "158405242512",
+    "firebase_url": "https://time-tracking-pwa.firebaseio.com",
+    "project_id": "time-tracking-pwa",
+    "storage_bucket": "time-tracking-pwa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158405242512:android:7913a29ab858b624",
+        "android_client_info": {
+          "package_name": "org.nativescript.NativeMobileTimeTracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158405242512-vpoq8km9r82cgntqvmdnqvon7aa9pl5h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC14MY6FDiMfOo_ThTFILaW-6nyzWN9fHM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

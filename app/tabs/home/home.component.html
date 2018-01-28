@@ -4,18 +4,7 @@ Feel free to customize layouts and components to change how the tab view looks.
 -->
 <FlexboxLayout class="page page-content" flexDirection="column" justifyContent="center" alignItems="center" width="95%" height="100%">
 
-    <DatePicker></DatePicker>
-    <StackLayout orientation="horizontal" width="80%" height="10%">
-        <Label class="page-placeholder" text="Category:"></Label>
-        <Button text="Categories"></Button>
-    </StackLayout>
-    <Slider width="80%" value="8"minValue="0" maxValue="10"></Slider>
-    <StackLayout orientation="horizontal" width="80%" height="10%">
-        <Label class="page-placeholder" text="Note:"></Label>
-        <TextField placeholder="Enter a note" width="80%"></TextField>
-    </StackLayout>
-    <StackLayout orientation="horizontal" width="80%" height="10%">
-        <Button text="Reset" backgroundColor="#b71c1c" color="white"></Button>
-        <Button text="Apply" backgroundColor="#2196f3" color="white"></Button>
-    </StackLayout>
+    <DatePicker marginBottom="10%"></DatePicker>
+    <Button text="Next" alignSelf="flex-end" (tap)="onNextTap()" backgroundColor="#3A53FF" color="white"></Button>
+
 </FlexboxLayout>

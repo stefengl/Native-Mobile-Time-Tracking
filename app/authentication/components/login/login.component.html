@@ -1,4 +1,4 @@
-<ActionBar class="action-bar" backgroundColor="#009688">
+<ActionBar class="action-bar" >
     <Label class="action-bar-title" text="Sign In"></Label>
 </ActionBar>
 
@@ -10,13 +10,13 @@
     </StackLayout>
 
     <StackLayout orientation="horizontal" width="80%">
-        <TextField name="login-pw" [(ngModel)]="loginModel.pw" hint="Enter your password" returnKeyType="done" (returnPress)="onSignInTap()"
+        <TextField name="login-pw" [(ngModel)]="loginModel.pw" hint="Enter your password" secure="true" returnKeyType="done" (returnPress)="onSignInTap()"
             width="100%"></TextField>
     </StackLayout>
 
     <StackLayout orientation="horizontal" width="80%" marginTop="5%">
         <Button text="Sign Up" (tap)="onSignUpTap()" backgroundColor="#b71c1c" color="white"></Button>
-        <Button text="Sign In" (tap)="onSignInTap()" backgroundColor="#009688" color="white"></Button>
+        <Button text="Sign In" (tap)="onSignInTap()" backgroundColor="#3A53FF" color="white"></Button>
     </StackLayout>
 
 </FlexboxLayout>
