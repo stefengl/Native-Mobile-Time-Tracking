@@ -3,13 +3,17 @@ import { LoginModel } from "../models/login.model";
 import { RegistrationModel } from "../models/registration.model";
 import { HttpClient } from "@angular/common/http";
 import "rxjs/add/operator/map"
+import { Subject } from "rxjs/Subject";
+import { Observable } from "rxjs/Observable";
 
 
 
 @Injectable()
 export class AuthenticationService {
     private endpoint: string = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyAOFJrOoZGs6mtx1oQoKHET-zzb-PabLUw"
-    private user: any = null;
+    user: any = {};
+    userSubject: Subject<any> = new Subject();
+    userObservable: Observable<any> = this.userSubject.asObservable();
 
     constructor(
         private http: HttpClient) { }
@@ -23,7 +27,7 @@ export class AuthenticationService {
             email: user.mail,
             password: user.pw,
             returnSecureToken: true
-        }).map(this.handleLogin)
+        })
     }
 
     logout(user: LoginModel) {
@@ -34,10 +38,7 @@ export class AuthenticationService {
         console.log("TODO: IsLoggedIn");
     }
 
-
-    handleLogin(response: Response) {
-        this.user = Object.assign({}, response)
-        return this.user;
+    onUserChanged(user) {
+        this.userSubject.next(user)
     }
-
 }

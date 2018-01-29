@@ -4,7 +4,6 @@ import { NativeScriptCommonModule } from "nativescript-angular/common";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 import { AuthenticationRoutingModule } from "./authentication.routing.module";
-import { TabsModule } from "../tabs/tabs.module";
 
 // Declarations
 import { LoginComponent } from "./components/login/login.component";
@@ -19,11 +18,10 @@ import { AuthenticationService } from "./shared/provider/authentication.service"
         NativeScriptFormsModule,
         NativeScriptHttpClientModule,
         AuthenticationRoutingModule,
-        TabsModule
     ],
     exports: [
-        LoginComponent,
-        RegistrationComponent
+/*         LoginComponent,
+        RegistrationComponent */
     ],
     declarations: [
         LoginComponent,

@@ -29,12 +29,13 @@ export class LoginComponent {
         this.auth.login(this.loginModel)
             .subscribe((user) => {
                 if (user) {
+                    this.auth.onUserChanged(user);
                     this.toTabs()
                 }
             })
     }
 
-    toTabs(){
+    toTabs() {
         this.router.navigate(["/tabs"])
     }
 }

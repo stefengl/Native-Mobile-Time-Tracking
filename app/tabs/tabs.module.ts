@@ -8,17 +8,37 @@ import { HistoryComponent } from "./history/history.component";
 import { HomeComponent } from "./home/home.component";
 import { SettingsComponent } from "./settings/settings.component";
 import { TabsComponent } from "./tabs.component";
+import { SelectDateComponent } from "./home/add-entry/components/select-date/select-date.component";
+import { SelectCategoryComponent } from "./home/add-entry/components/select-category/select-category.component";
+import { SelectTimeComponent } from "./home/add-entry/components/select-time/select-time.component";
+import { SelectTagsComponent } from "./home/add-entry/components/select-tags/select-tags.component";
+import { SelectNoteComponent } from "./home/add-entry/components/select-note/select-note.component";
+
+// PROVIDER
+import { AddEntryService } from "./home/add-entry/provider/add-entry.service";
+import { DataService } from "./shared/data.service";
+import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 
 @NgModule({
     imports: [
         NativeScriptCommonModule,
-        TabsRoutingModule
+        TabsRoutingModule,
+        NativeScriptHttpClientModule
     ],
     declarations: [
         TabsComponent,
         HomeComponent,
         HistoryComponent,
-        SettingsComponent
+        SettingsComponent,
+        SelectDateComponent,
+        SelectCategoryComponent,
+        SelectTimeComponent,
+        SelectTagsComponent,
+        SelectNoteComponent
+    ],
+    providers:[
+        AddEntryService,
+        DataService
     ],
     schemas: [
         NO_ERRORS_SCHEMA

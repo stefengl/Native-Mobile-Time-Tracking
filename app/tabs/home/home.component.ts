@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
     selector: "Home",
@@ -9,12 +10,13 @@ export class HomeComponent implements OnInit {
 
     currentProgress: number = 0;
 
-    constructor() {}
+    constructor(
+        private router: Router
+    ) { }
 
-    ngOnInit(): void {}
+    ngOnInit(): void { 
 
-
-    onNextTap(){
-        this.currentProgress += 1;
+        // TODO SUBSCRIPTION
     }
+
 }
