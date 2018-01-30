@@ -13,6 +13,8 @@
     }
   },
   "scripts": {
+    "build:android":"tns build android",
+    "build:ios":"tns build ios",
     "lint": "tslint --fix \"app/**/*.ts\""
   },
   "dependencies": {
